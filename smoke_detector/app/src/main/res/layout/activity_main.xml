@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Превью с камеры -->
+    <androidx.camera.view.PreviewView
+        android:id="@+id/previewView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_weight="0" />
+    <!-- Для упрощения задан фиксированный размер. Можно использовать ConstraintLayout
+         или вес (weight), чтобы динамически распределять пространство. -->
+
+    <!-- Текстовый индикатор статуса -->
+    <TextView
+        android:id="@+id/statusTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Курение не обнаружено"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:padding="8dp"
+        android:textStyle="bold"/>
+
+    <!-- Список для истории событий -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/historyRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp"/>
+    <!-- RecyclerView заполнит оставшееся пространство и позволит прокручивать список событий -->
+</LinearLayout>
